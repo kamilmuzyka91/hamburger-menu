@@ -53,4 +53,13 @@ body {
   left: 0;
   top: -10px;
 }
+.hamburger.hamburger--active .hamburger__inner {
+  background-color: transparent;
+}
+.hamburger.hamburger--active .hamburger__inner:before {
+  transform: translateY(-10px) rotate(45deg);
+}
+.hamburger.hamburger--active .hamburger__inner:after {
+  transform: translateY(10px) rotate(-45deg);
+}
 /*# sourceMappingURL=main.css.map */
