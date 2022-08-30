@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-  padding: 20px;
+  padding: 25px;
 }
 
 .hamburger {
@@ -25,7 +25,6 @@ body {
   width: 2.5em;
   height: 1.8em;
   position: relative;
-  background-color: rgb(55, 55, 55);
 }
 .hamburger .hamburger__box .hamburger__inner {
   width: 100%;
@@ -65,5 +64,36 @@ body {
 }
 .hamburger.hamburger--active .hamburger__inner:after {
   transform: translateY(10px) rotate(-45deg);
+}
+.hamburger.hamburger--active {
+  transform: translateX(16em);
+}
+
+.navigation {
+  width: 16em;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-16em);
+}
+.navigation .navigation__list {
+  list-style: none;
+  margin-top: 3.5em;
+}
+.navigation .navigation__item {
+  margin: 1.5em 0;
+}
+.navigation .navigation__item a {
+  text-decoration: none;
+  color: #000;
+}
+.navigation .navigation--active {
+  transform: translateX(0);
+}
+
+.hamburger .navigation {
+  transition: transform 0.3s 0.1s easy-in-out;
 }
 /*# sourceMappingURL=main.css.map */
