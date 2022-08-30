@@ -1,9 +1,13 @@
 # Hamburger menu
 
-Reusable, responsive and accesibility hamburger menu in SCSS.
+Reusable, responsive and accesibility hamburger menu in SCSS
 
-Created with this tutorial:
-https://youtu.be/QWn7kP-QoNw
+### DEMO
+
+Check live demo page: https://clear-burger-menu.netlify.app
+
+- Created with tutorial
+  (https://youtu.be/QWn7kP-QoNw)
 
 # Accesibility
 

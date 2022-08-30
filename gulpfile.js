@@ -6,6 +6,7 @@ sass.compiler = require("sass");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
+
 function compileSass(done) {
   gulp
     .src(entryPath + "/scss/**/*.scss")
