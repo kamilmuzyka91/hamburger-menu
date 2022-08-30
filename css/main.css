@@ -34,6 +34,7 @@ body {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  transition: background-color 0.2s 0.1s ease-in-out;
 }
 .hamburger .hamburger__box .hamburger__inner::before {
   width: 100%;
@@ -43,6 +44,7 @@ body {
   content: "";
   left: 0;
   top: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 .hamburger .hamburger__box .hamburger__inner::after {
   width: 100%;
@@ -52,6 +54,7 @@ body {
   content: "";
   left: 0;
   top: -10px;
+  transition: transform 0.3s ease-in-out;
 }
 .hamburger.hamburger--active .hamburger__inner {
   background-color: transparent;

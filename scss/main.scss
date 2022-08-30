@@ -45,6 +45,7 @@ body {
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+      transition: background-color 0.2s 0.1s ease-in-out;
 
       // hamburger bottom line
       &::before {
@@ -53,6 +54,7 @@ body {
         content: "";
         left: 0;
         top: 10px;
+        transition: transform 0.3s ease-in-out;
       }
 
       //hamburger top line
@@ -62,6 +64,7 @@ body {
         content: "";
         left: 0;
         top: -10px;
+        transition: transform 0.3s ease-in-out;
       }
     }
   }
