@@ -20,13 +20,15 @@ body {
   border: 0;
   margin: 0;
 }
-.hamburger .hamburger__box {
+
+.hamburger__box {
   display: inline-block;
   width: 2.5em;
   height: 1.8em;
   position: relative;
 }
-.hamburger .hamburger__box .hamburger__inner {
+
+.hamburger__inner {
   width: 100%;
   height: 3px;
   background-color: #fff;
@@ -36,7 +38,7 @@ body {
   transform: translateY(-50%);
   transition: background-color 0.2s 0.1s ease-in-out;
 }
-.hamburger .hamburger__box .hamburger__inner::before {
+.hamburger__inner::before {
   width: 100%;
   height: 3px;
   background-color: #fff;
@@ -46,7 +48,7 @@ body {
   top: 10px;
   transition: transform 0.3s ease-in-out;
 }
-.hamburger .hamburger__box .hamburger__inner::after {
+.hamburger__inner::after {
   width: 100%;
   height: 3px;
   background-color: #fff;
@@ -56,21 +58,25 @@ body {
   top: -10px;
   transition: transform 0.3s ease-in-out;
 }
-.hamburger.hamburger--active .hamburger__inner {
+
+.hamburger--active .hamburger__inner {
   background-color: transparent;
 }
-.hamburger.hamburger--active .hamburger__inner:before {
+
+.hamburger--active .hamburger__inner:before {
   transform: translateY(-10px) rotate(45deg);
 }
-.hamburger.hamburger--active .hamburger__inner:after {
+
+.hamburger--active .hamburger__inner:after {
   transform: translateY(10px) rotate(-45deg);
 }
-.hamburger.hamburger--active {
+
+.hamburger--active {
   transform: translateX(16em);
 }
 
 .navigation {
-  width: 16em;
+  width: 250px;
   height: 100vh;
   background-color: #fff;
   position: absolute;
@@ -78,22 +84,36 @@ body {
   left: 0;
   transform: translateX(-16em);
 }
-.navigation .navigation__list {
-  list-style: none;
-  margin-top: 3.5em;
-}
-.navigation .navigation__item {
-  margin: 1.5em 0;
-}
-.navigation .navigation__item a {
-  text-decoration: none;
-  color: #000;
-}
-.navigation .navigation--active {
+
+.navigation--active {
   transform: translateX(0);
 }
 
-.hamburger .navigation {
-  transition: transform 0.3s 0.1s easy-in-out;
+.navigation__list {
+  list-style: none;
+  margin-top: 3.5em;
+}
+
+.navigation__item {
+  margin: 1.5em 0;
+}
+.navigation__item a {
+  text-decoration: none;
+  color: #000;
+}
+.navigation__item a:visited {
+  color: #000;
+}
+.navigation__item a:hover {
+  color: #000;
+  opacity: 0.5;
+}
+.navigation__item a:active {
+  color: #000;
+}
+
+.hamburger,
+.navigation {
+  transition: transform 0.3s 0.1s ease-in-out;
 }
 /*# sourceMappingURL=main.css.map */
