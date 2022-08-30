@@ -1,0 +1,86 @@
+$-hamburger-line: #fff;
+$-hamburger-width: 2.5em;
+$-hamburger-height: 1.8em;
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin hamburger__line {
+  width: 100%;
+  height: 3px;
+  background-color: $-hamburger-line;
+  position: absolute;
+}
+
+body {
+  background: #000;
+  margin: 0;
+  color: #fff;
+}
+
+.header {
+  padding: 20px;
+}
+
+// hamburger btn
+.hamburger {
+  display: inline-block;
+  padding: 15px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  margin: 0;
+
+  // box for line
+  .hamburger__box {
+    display: inline-block;
+    width: $-hamburger-width;
+    height: $-hamburger-height;
+    position: relative;
+    background-color: rgb(55, 55, 55); // delate
+
+    //hamburger inner line
+    .hamburger__inner {
+      @include hamburger__line;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background-color 0.2s 0.1s ease-in-out;
+
+      // hamburger bottom line
+      &::before {
+        @include hamburger__line;
+
+        content: "";
+        left: 0;
+        top: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      //hamburger top line
+      &::after {
+        @include hamburger__line;
+
+        content: "";
+        left: 0;
+        top: -10px;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+
+  // hamburger open
+  &.hamburger--active .hamburger__inner {
+    background-color: transparent;
+  }
+
+  // important - first transform, latera rotate
+  &.hamburger--active .hamburger__inner:before {
+    transform: translateY(-10px) rotate(45deg);
+  }
+
+  &.hamburger--active .hamburger__inner:after {
+    transform: translateY(10px) rotate(-45deg);
+  }
+}
